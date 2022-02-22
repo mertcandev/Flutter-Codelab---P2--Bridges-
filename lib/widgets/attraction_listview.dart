@@ -9,6 +9,8 @@ class AttractionListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
+          physics: const BouncingScrollPhysics(
+              parent: AlwaysScrollableScrollPhysics()),
           padding: const EdgeInsets.only(left: 10),
           itemCount: attractions.length,
           scrollDirection: Axis.horizontal,
